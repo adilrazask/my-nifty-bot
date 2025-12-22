@@ -17,7 +17,9 @@ api_key = os.getenv("aMIKAmfm")
 client_code = os.getenv("aMIKAmfm")
 password = os.getenv("0713")
 totp_secret = os.getenv("BCMFG5RQGQXOYCTY7ZTS6GTEBI")
-
+st.sidebar.write(f"API Key loaded: { 'Yes' if api_key else 'No' }")
+st.sidebar.write(f"Client Code: {client_code}")
+st.sidebar.write(f"TOTP Secret loaded: { 'Yes' if totp_secret else 'No' }")
 st.sidebar.header("Bot Status")
 
 if not all([api_key, client_code, password, totp_secret]):
